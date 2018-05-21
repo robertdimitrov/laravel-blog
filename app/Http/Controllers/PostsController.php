@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Post;
+use \App\Utilities\Tokenizer\Tokenizer;
+use League\CommonMark\Converter;
 
 class PostsController extends Controller
 {
-    public function __construct()
+	protected $converter;
+	protected $tokenizer;
+
+    public function __construct(Converter $converter)
     {
     	$this->middleware('auth');
+    	$this->converter = $converter;
+    	$this->tokenizer = new Tokenizer();
     }
 
     public function index()
@@ -33,18 +40,9 @@ class PostsController extends Controller
     		'content_md' => 'required'
     	]);
 
-    	// @TODO: create html from markdown
-    	$content_html = '';
-
-    	// @TODO: generate tokens string from content
-    	$tokens = '';
-
     	$post = new Post;
-    	$post->title = request('title');
-    	$post->content_md = request('content_md');
-    	$post->content_html = $content_html;
-    	$post->tokens = $tokens;
-    	$post->save();
+
+    	$this->persistPost($post);
 
     	return redirect()->home();
     }
@@ -82,19 +80,22 @@ class PostsController extends Controller
     		'content_md' => 'required'
     	]);
 
-    	// @TODO: create html from markdown
-    	$content_html = '';
-
-    	// @TODO: generate tokens string from content
-    	$tokens = '';
-
-    	$post->title = request('title');
-    	$post->content_md = request('content_md');
-    	$post->content_html = $content_html;
-    	$post->tokens = $tokens;
-
-    	$post->save();
+    	$this->persistPost($post);
 
     	return redirect()->home();
+    }
+
+    private function persistPost(Post $post)
+    {
+		$title = request('title');
+    	$content_md = request('content_md');
+
+    	$tokens = $this->tokenizer->tokenize($title . $content_md);
+
+    	$post->title = $title;
+    	$post->content_md = $content_md;
+    	$post->content_html = $this->converter->convertToHtml($content_md);
+    	$post->tokens = implode(' ', $tokens);
+    	$post->save();
     }
 }
