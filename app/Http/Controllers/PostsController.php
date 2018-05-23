@@ -7,6 +7,7 @@ use \App\Post;
 use \App\Utilities\Tokenizer\Tokenizer;
 use League\CommonMark\Converter;
 
+
 class PostsController extends Controller
 {
 	protected $converter;
@@ -21,9 +22,13 @@ class PostsController extends Controller
 
     public function index()
     {
-    	// @TODO: filters
+    	// @TODO: filters (category)
 
-    	$posts = Post::get();
+    	$posts = Post::latest()
+    		->filter(request(['search', 'page']))
+    		->distinct()
+    		->get()
+    		->toArray();
 
     	return view('posts.index', compact('posts'));
     }
@@ -49,7 +54,7 @@ class PostsController extends Controller
 
     public function showRandom()
     {
-    	// @TODO: filters
+    	// @TODO: filters (category)
 
     	$post = Post::inRandomOrder()->first();
 
