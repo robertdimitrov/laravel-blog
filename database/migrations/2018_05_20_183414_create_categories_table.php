@@ -21,8 +21,8 @@ class CreateCategoriesTable extends Migration
             });
         }
 
-        if(!Schema::hasTable('post_category')){
-            Schema::create('post_category', function (Blueprint $table) {
+        if(!Schema::hasTable('category_post')){
+            Schema::create('category_post', function (Blueprint $table) {
                 $table->integer('post_id');
                 $table->integer('category_id');
                 $table->primary(['post_id', 'category_id']);
@@ -38,6 +38,6 @@ class CreateCategoriesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('categories');
-        Schema::dropIfExists('post_category');
+        Schema::dropIfExists('category_post');
     }
 }

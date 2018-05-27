@@ -33,10 +33,7 @@ class Post extends Model
 
     		$page = gettype($page) === "integer" ? $page : 0;
 
-    		if (gettype($page) === "integer")
-    		{
-    			$query->skip($page*$postsPerPage);
-    		}
+			$query->skip($page*$postsPerPage);
     	}
 
     	if (array_key_exists('search', $filters))
@@ -54,5 +51,15 @@ class Post extends Model
 				$query->take(0);
 			}
     	}
+
+        if (array_key_exists('category', $filters))
+        {
+            $category = strtolower($filters['category']);
+
+            $query->whereHas('categories', function($query) use($category){
+                $query->where('name', '=', $category);
+            });
+        }
+        
     }
 }

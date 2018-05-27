@@ -16,6 +16,11 @@
 	<textarea name="content_md" id="content_md" cols="80" rows="20">{{$post->content_md}}</textarea>
 	<br>
 	<br>
+
+	<label for="categories">Categories:</label><br>
+	<input type="text" name="categories" id="categories" value="{{ $categories }}" required>
+	<br>
+	<br>
 	
 
 	<button type="submit">Submit</button>

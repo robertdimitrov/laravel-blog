@@ -15,6 +15,11 @@
 	<br>
 	<br>
 
+	<label for="categories">Categories:</label><br>
+	<input type="text" name="categories" id="categories" required>
+	<br>
+	<br>
+
 	<button type="submit">Submit</button>
 </form>
 @endsection
