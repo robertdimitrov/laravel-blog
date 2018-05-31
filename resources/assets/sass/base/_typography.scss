@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:300,400,600,700|IBM+Plex+Serif');
+
+$ibm-plex: 'IBM Plex Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+$ibm-plex-serif: 'IBM Plex Serif', serif;
+$ibm-plex-mono: 'IBM Plex Mono', 'Avenir', monospace;
+
+body {
+	font-family: $ibm-plex;
+	color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin: 8px 0;
+}

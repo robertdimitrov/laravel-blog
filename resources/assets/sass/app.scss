@@ -1,2 +1,16 @@
 // Variables
 @import "variables";
+
+// Base
+@import "base/normalize";
+@import "base/typography";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+@import "components/buttons";
+
+// Modules
+@import "modules/forms";
