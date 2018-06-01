@@ -26,9 +26,16 @@
 						<input type="password" name="password_confirmation" id="password_confirmation" required>
 					</div>
 
-					<button class="button full-width" type="submit">Create account</button>
+					<button class="button button-animated button-success full-width" type="submit">Create account</button>
 				</form>
 			</div>
+			@if (count($errors))
+				<div class="error">
+					@foreach ($errors->all() as $error)
+						<p>{{ $error }}</p>
+					@endforeach
+				</div>
+			@endif
 		</div>
 	</section>
 @endsection

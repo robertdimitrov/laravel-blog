@@ -1,5 +1,5 @@
 .center-container {
-	height: 100vh;
+	height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -8,6 +8,7 @@
 
     .center-container-item {
 		padding-bottom: 40px;
+		margin: auto;
 
     	.logo-wrapper img{
 			display: block;
@@ -19,6 +20,10 @@
     		text-align: center;
     		margin: 4px 0 16px 0;
     	}
+
+    	.error {
+    		text-align: center;
+    	}
     }
 }
 
@@ -26,7 +31,7 @@
 	border: 1px solid $light-grey;
 	box-shadow: 0 0 2px 2px rgba($light-grey, 0.2);
 	border-radius: 4px;
-	padding: 24px;
+	padding: 28px 24px;
 	background-color: white;
 	
 	.form-input-group {
@@ -51,7 +56,7 @@ input {
 	width: 300px;
 	color: $text-color;
 	border-radius: 4px;
-	padding: 7px 8px;
+	padding: 8px 12px;
 	font-size: 1rem; 
 	appearance: none;
 	border: 1px solid $light-grey;

@@ -2,6 +2,10 @@ body {
 	background-color: $body-bg;
 }
 
+html, body, main {
+	height: 100%;
+}
+
 .full-width {
 	width: 100%;
 }

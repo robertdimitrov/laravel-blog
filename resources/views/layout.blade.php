@@ -13,6 +13,6 @@
 	@yield('content')
 	</main>
 
-	@include('layouts.errors')
+	{{-- @include('layouts.errors') --}}
 </body>
 </html>
