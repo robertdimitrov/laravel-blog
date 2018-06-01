@@ -389,6 +389,35 @@ h6 {
   margin: 8px 0;
 }
 
+.smaller-heading {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.button {
+  background: #ee0039;
+  color: white;
+  -webkit-box-shadow: 0 0.5rem 1rem -0.3rem rgba(238, 0, 57, 0.4);
+          box-shadow: 0 0.5rem 1rem -0.3rem rgba(238, 0, 57, 0.4);
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+  padding: 12px 28px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+}
+
+.button:hover {
+  background: #e40037;
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
 .center-container {
   height: 100vh;
   padding: 0;
@@ -404,6 +433,10 @@ h6 {
           justify-content: center;
 }
 
+.center-container .center-container-item {
+  padding-bottom: 40px;
+}
+
 .center-container .center-container-item .logo-wrapper img {
   display: block;
   margin: auto;
@@ -412,23 +445,59 @@ h6 {
 
 .center-container .center-container-item h1 {
   text-align: center;
+  margin: 4px 0 16px 0;
 }
 
-.center-container .center-container-item .form-wrapper {
-  border: 2px solid #ddd;
-  padding: 16px 32px;
+.form-wrapper {
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 0 2px 2px rgba(221, 221, 221, 0.2);
+          box-shadow: 0 0 2px 2px rgba(221, 221, 221, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+  background-color: white;
 }
 
-.center-container .center-container-item .form-wrapper .form-input-group {
-  margin-bottom: 8px;
+.form-wrapper .form-input-group {
+  margin-bottom: 16px;
 }
 
-.center-container .center-container-item .form-wrapper .form-input-group label {
-  display: block;
+.form-wrapper .form-input-group label {
   margin-bottom: 4px;
 }
 
-.center-container .center-container-item .form-wrapper .form-input-group input {
+.form-wrapper button {
+  margin-top: 8px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+}
+
+input {
+  width: 300px;
+  color: #333;
+  border-radius: 4px;
+  padding: 7px 8px;
+  font-size: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ddd;
+}
+
+input:focus {
+  outline: none;
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 3px 1px rgba(68, 137, 234, 0.7);
+          box-shadow: 0 0 3px 1px rgba(68, 137, 234, 0.7);
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.full-width {
   width: 100%;
 }
 

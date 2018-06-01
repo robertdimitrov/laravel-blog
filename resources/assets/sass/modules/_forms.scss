@@ -7,6 +7,7 @@
     justify-content: center;
 
     .center-container-item {
+		padding-bottom: 40px;
 
     	.logo-wrapper img{
 			display: block;
@@ -16,24 +17,48 @@
 
     	h1 {
     		text-align: center;
-    	}
-
-    	.form-wrapper {
-    		border: 2px solid $light-grey;
-			padding: 16px 32px;
-			
-			.form-input-group {
-				margin-bottom: 8px;
-
-				label {
-					display: block;
-					margin-bottom: 4px;
-				}
-
-				input {
-					width: 100%;
-				}
-			}
+    		margin: 4px 0 16px 0;
     	}
     }
+}
+
+.form-wrapper {
+	border: 1px solid $light-grey;
+	box-shadow: 0 0 2px 2px rgba($light-grey, 0.2);
+	border-radius: 4px;
+	padding: 24px;
+	background-color: white;
+	
+	.form-input-group {
+		margin-bottom: 16px;
+
+		label {
+			margin-bottom: 4px;
+		}
+	}
+
+	button {
+		margin-top: 8px;
+	}
+}
+
+label {
+	display: block;
+	font-size: 0.8rem;
+}
+
+input {
+	width: 300px;
+	color: $text-color;
+	border-radius: 4px;
+	padding: 7px 8px;
+	font-size: 1rem; 
+	appearance: none;
+	border: 1px solid $light-grey;
+}
+
+input:focus {
+	outline: none;
+	border-color: transparent;
+	box-shadow: 0 0 3px 1px rgba($info-color, 0.7);
 }

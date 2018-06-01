@@ -6,7 +6,7 @@
 			<div class="logo-wrapper">
 				<img src="img/logo.svg" alt="Logo">
 			</div>
-			<h1>Set up your account</h1>
+			<h1 class="smaller-heading">Set up your account</h1>
 			<div class="form-wrapper">
 				<form class="registration-form" method="POST" action="/register">
 					{{ csrf_field() }}
@@ -22,11 +22,11 @@
 					</div>
 
 					<div class="form-input-group">
-						<label for="password_confirmation">Password confirmation:</label>
+						<label for="password_confirmation">Confirm password:</label>
 						<input type="password" name="password_confirmation" id="password_confirmation" required>
 					</div>
 
-					<button type="submit">Submit</button>
+					<button class="button full-width" type="submit">Create account</button>
 				</form>
 			</div>
 		</div>
