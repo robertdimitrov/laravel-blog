@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Laravel Blog</title>
 	<link rel="stylesheet" href="css/app.css">
-	<script src="js/app.js"></script>
 </head>
 <body>
 	
@@ -14,5 +13,7 @@
 	</main>
 
 	{{-- @include('layouts.errors') --}}
+
+	<script src="js/app.js"></script>
 </body>
 </html>

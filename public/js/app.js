@@ -750,7 +750,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(30);
+module.exports = __webpack_require__(31);
 
 
 /***/ }),
@@ -764,6 +764,8 @@ module.exports = __webpack_require__(30);
  */
 
 __webpack_require__(9);
+
+__webpack_require__(30);
 
 /***/ }),
 /* 9 */
@@ -1871,6 +1873,72 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports) {
+
+// form classes
+var registrationFormCls = 'registration-form';
+var feedbackCls = 'feedback';
+
+// validation patterns
+var namePattern = /^.{2,30}$/;
+var passwordPattern = /^.{6,30}$/;
+
+// validation error messages
+var nameLengthMessage = 'Name must be between 2 and 30 characters.';
+var passwordLengthMessage = 'Password must be between 6 and 30 characters.';
+var passwordMismatchMessage = 'Password does not match the confirm password.';
+
+var validName = function validName(name) {
+	return namePattern.test(name);
+};
+var validPassword = function validPassword(password) {
+	return passwordPattern.test(password);
+};
+var validPasswordMatch = function validPasswordMatch(password, passwordConfirmation) {
+	return password === passwordConfirmation;
+};
+
+var formFeedback = function formFeedback(message) {
+	var feedback = document.getElementsByClassName(feedbackCls)[0];
+	feedback.innerHTML = '';
+	var feedbackElement = document.createElement('p');
+	feedbackElement.innerText = message;
+	feedback.appendChild(feedbackElement);
+};
+
+var validateRegistrationForm = function validateRegistrationForm(name, password, passwordConfirmation) {
+	if (!validName(name)) {
+		formFeedback(nameLengthMessage);
+		return false;
+	}
+
+	if (!validPassword(password)) {
+		formFeedback(passwordLengthMessage);
+		return false;
+	}
+
+	if (!validPasswordMatch(password, passwordConfirmation)) {
+		formFeedback(passwordMismatchMessage);
+		return false;
+	}
+
+	return true;
+};
+
+var registrationForm = document.getElementsByClassName(registrationFormCls)[0];
+
+registrationForm.addEventListener('submit', function (e) {
+	var nameValue = registrationForm.elements['name'].value;
+	var passwordValue = registrationForm.elements['password'].value;
+	var passwordConfirmationValue = registrationForm.elements['password_confirmation'].value;
+
+	if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
+		e.preventDefault();
+	}
+});
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

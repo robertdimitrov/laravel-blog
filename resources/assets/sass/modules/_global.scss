@@ -9,3 +9,12 @@ html, body, main {
 .full-width {
 	width: 100%;
 }
+
+.hidden {
+	display: none;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

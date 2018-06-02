@@ -9,6 +9,7 @@
     .center-container-item {
 		padding-bottom: 40px;
 		margin: auto;
+		position: relative;
 
     	.logo-wrapper img{
 			display: block;
@@ -21,8 +22,14 @@
     		margin: 4px 0 16px 0;
     	}
 
-    	.error {
+    	.feedback {
     		text-align: center;
+    		position: absolute;
+    		width: 100%;
+
+    		p {
+    			animation: fadein .5s;
+    		}
     	}
     }
 }

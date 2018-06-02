@@ -472,6 +472,7 @@ h6 {
 .center-container .center-container-item {
   padding-bottom: 40px;
   margin: auto;
+  position: relative;
 }
 
 .center-container .center-container-item .logo-wrapper img {
@@ -485,8 +486,15 @@ h6 {
   margin: 4px 0 16px 0;
 }
 
-.center-container .center-container-item .error {
+.center-container .center-container-item .feedback {
   text-align: center;
+  position: absolute;
+  width: 100%;
+}
+
+.center-container .center-container-item .feedback p {
+  -webkit-animation: fadein .5s;
+          animation: fadein .5s;
 }
 
 .form-wrapper {
@@ -546,5 +554,29 @@ main {
 
 .full-width {
   width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
