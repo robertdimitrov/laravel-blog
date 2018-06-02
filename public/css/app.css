@@ -542,6 +542,12 @@ input:focus {
           box-shadow: 0 0 3px 1px rgba(68, 137, 234, 0.7);
 }
 
+@media screen and (max-width: 480px) {
+  input {
+    width: 220px;
+  }
+}
+
 body {
   background-color: #fafafa;
 }

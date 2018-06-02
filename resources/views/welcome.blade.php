@@ -2,5 +2,5 @@
 
 @section('content')
 	<h1>Welcome!</h1>
-	<a href="/logout">Log Out</a>
+	<a href="/signout">Log Out</a>
 @endsection

@@ -74,3 +74,9 @@ input:focus {
 	border-color: transparent;
 	box-shadow: 0 0 3px 1px rgba($info-color, 0.7);
 }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	input {
+		width: 220px;
+	}
+}

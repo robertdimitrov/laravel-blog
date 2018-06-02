@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
-Route::get('/login', 'SessionsController@create');
-Route::post('/login', 'SessionsController@store');
-Route::get('/logout', 'SessionsController@destroy');
+Route::get('/signin', 'SessionsController@create');
+Route::post('/signin', 'SessionsController@store');
+Route::get('/signout', 'SessionsController@destroy');
 
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/new', 'PostsController@create');

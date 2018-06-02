@@ -32,11 +32,11 @@ class Authenticate
         }
 
         // If the database contains user data, but there is no active
-        // session, redirect to the login page.
+        // session, redirect to the sign in page.
 
         if (!Auth::check())
         {
-            $excludePaths = ['login'];
+            $excludePaths = ['signin'];
 
             if (!$hasUsers)
             {
@@ -45,7 +45,7 @@ class Authenticate
 
             if (!in_array($path, $excludePaths))
             {
-                return redirect('/login');
+                return redirect('/signin');
             } 
         }
 
