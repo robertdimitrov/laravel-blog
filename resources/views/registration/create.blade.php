@@ -4,7 +4,7 @@
 	<section class="center-container">
 		<div class="center-container-item">
 			<div class="logo-wrapper">
-				<img src="img/logo.svg" alt="Logo">
+				<img src="/img/logo.svg" alt="Logo">
 			</div>
 			<h1 class="smaller-heading">Set up your account</h1>
 			<div class="form-wrapper">

@@ -1,9 +1,26 @@
 body {
 	background-color: $body-bg;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-html, body, main {
-	height: 100%;
+main {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
+}
+
+a, a:hover, a:focus, a:visited {
+	text-decoration: none;
+	color: $highlight-color;
+}
+
+a:hover {
+	color: darken($highlight-color,4%);
 }
 
 .full-width {

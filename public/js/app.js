@@ -1927,15 +1927,17 @@ var validateRegistrationForm = function validateRegistrationForm(name, password,
 
 var registrationForm = document.getElementsByClassName(registrationFormCls)[0];
 
-registrationForm.addEventListener('submit', function (e) {
-	var nameValue = registrationForm.elements['name'].value;
-	var passwordValue = registrationForm.elements['password'].value;
-	var passwordConfirmationValue = registrationForm.elements['password_confirmation'].value;
+if (registrationForm) {
+	registrationForm.addEventListener('submit', function (e) {
+		var nameValue = registrationForm.elements['name'].value;
+		var passwordValue = registrationForm.elements['password'].value;
+		var passwordConfirmationValue = registrationForm.elements['password_confirmation'].value;
 
-	if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
-		e.preventDefault();
-	}
-});
+		if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
+			e.preventDefault();
+		}
+	});
+}
 
 /***/ }),
 /* 31 */

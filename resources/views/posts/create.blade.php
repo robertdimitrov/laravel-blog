@@ -16,7 +16,7 @@
 	<br>
 
 	<label for="categories">Categories:</label><br>
-	<input type="text" name="categories" id="categories" required>
+	<input type="text" name="categories" id="categories">
 	<br>
 	<br>
 

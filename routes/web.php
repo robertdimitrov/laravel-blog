@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$homePage = true;
+    return view('welcome', compact('homePage'));
 })->name('home');
 
 Route::get('/register', 'RegistrationController@create');

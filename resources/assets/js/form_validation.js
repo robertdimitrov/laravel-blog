@@ -44,12 +44,14 @@ let validateRegistrationForm = (name, password, passwordConfirmation) => {
 
 let registrationForm = document.getElementsByClassName(registrationFormCls)[0]
 
-registrationForm.addEventListener('submit', function(e) {
-	let nameValue = registrationForm.elements['name'].value
-	let passwordValue = registrationForm.elements['password'].value
-	let passwordConfirmationValue = registrationForm.elements['password_confirmation'].value
+if (registrationForm) {
+	registrationForm.addEventListener('submit', function(e) {
+		let nameValue = registrationForm.elements['name'].value
+		let passwordValue = registrationForm.elements['password'].value
+		let passwordConfirmationValue = registrationForm.elements['password_confirmation'].value
 
-	if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
-		e.preventDefault()
-	}
-})
+		if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
+			e.preventDefault()
+		}
+	})
+}
