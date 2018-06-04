@@ -10,6 +10,12 @@ main {
 	flex: 1 0 auto;
 }
 
+main > section:not(.center-container) {
+	padding: 32px 12%;
+	background-color: white;
+	z-index: 0;
+}
+
 footer {
 	flex-shrink: 0;
 }
@@ -34,4 +40,10 @@ a:hover {
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	main {
+		width: 100%;
+	}
 }

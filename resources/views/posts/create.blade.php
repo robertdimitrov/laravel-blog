@@ -1,25 +1,29 @@
 @extends('layout')
 
 @section('content')
-<h1>Create new post</h1>
-<form action="/posts" method="POST">
-	{{ csrf_field() }}
+<section>
+	<h1>Create new post</h1>
+	<div class="form-wrapper">
+		<form class="post-form" action="/posts" method="POST">
+			{{ csrf_field() }}
 
-	<label for="title">Title:</label><br>
-	<input type="text" name="title" id="title" required>
-	<br>
-	<br>
+			<div class="form-input-group">
+				<label for="title">Title:</label>
+				<input type="text" name="title" id="title" required>
+			</div>
 
-	<label for="content_md">Content:</label><br>
-	<textarea name="content_md" id="content_md" cols="80" rows="20"></textarea>
-	<br>
-	<br>
+			<div class="form-input-group">
+				<label for="content_md">Content:</label>
+				<textarea name="content_md" id="content_md" cols="80" rows="20"></textarea>
+			</div>
 
-	<label for="categories">Categories:</label><br>
-	<input type="text" name="categories" id="categories">
-	<br>
-	<br>
+			<div class="form-input-group">
+				<label for="categories">Categories:</label>
+				<input type="text" name="categories" id="categories">
+			</div>
 
-	<button type="submit">Submit</button>
-</form>
+			<button class="button button-animated button-success" type="submit">Create post</button>
+		</form>
+	</div>
+</section>
 @endsection

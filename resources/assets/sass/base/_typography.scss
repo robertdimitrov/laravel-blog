@@ -7,6 +7,7 @@ $ibm-plex-mono: 'IBM Plex Mono', 'Avenir', monospace;
 body {
 	font-family: $ibm-plex;
 	color: $text-color;
+	line-height: $line-height-base;
 }
 
 h1, h2, h3, h4, h5, h6 {
