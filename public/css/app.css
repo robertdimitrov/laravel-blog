@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:300,400,600,700|IBM+Plex+Serif);/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:200,300,400,600,700|IBM+Plex+Serif);/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -377,7 +377,7 @@ template {
 body {
   font-family: "IBM Plex Sans", "Helvetica Neue", "Helvetica", sans-serif;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.8;
 }
 
 h1,
@@ -396,18 +396,14 @@ h6 {
 }
 
 header {
-  background-color: white;
+  background-color: #fdfdfd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 8px 80px;
-  border-bottom: 1px solid #e8e8e8;
-  -webkit-box-shadow: 0 2px 2px 2px rgba(232, 232, 232, 0.2);
-          box-shadow: 0 2px 2px 2px rgba(232, 232, 232, 0.2);
-  z-index: 10;
+  padding: 8px 10%;
 }
 
 header .logo-wrapper {
@@ -448,6 +444,31 @@ header .buttons-wrapper ul li {
 
 header .buttons-wrapper ul li a {
   color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+header .buttons-wrapper ul li a:active {
+  color: #ee0039;
+}
+
+header .buttons-wrapper ul li a:after {
+  content: "";
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ee0039;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+header .buttons-wrapper ul li a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -458,7 +479,7 @@ header .buttons-wrapper ul li a {
 
 footer {
   width: 100%;
-  background-color: #e8e8e8;
+  background-color: #eee;
   text-align: center;
   padding: 12px 0;
 }
@@ -538,7 +559,7 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #eee;
 }
 
 input:focus {
@@ -581,9 +602,9 @@ input:focus {
 }
 
 .center-container .center-container-item .form-wrapper {
-  border: 1px solid #e8e8e8;
-  -webkit-box-shadow: 0 0 2px 2px rgba(232, 232, 232, 0.2);
-          box-shadow: 0 0 2px 2px rgba(232, 232, 232, 0.2);
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0 0 2px 2px rgba(238, 238, 238, 0.2);
+          box-shadow: 0 0 2px 2px rgba(238, 238, 238, 0.2);
   border-radius: 4px;
   padding: 28px 24px;
   background-color: white;
@@ -613,12 +634,16 @@ input:focus {
 }
 
 .post-form {
-  margin-top: 24px;
+  margin: 24px 0 32px;
 }
 
 .post-form input,
 .post-form textarea {
-  width: 80%;
+  width: 100%;
+}
+
+.post-form button {
+  margin-top: 16px;
 }
 
 @media screen and (max-width: 480px) {
@@ -628,7 +653,7 @@ input:focus {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fdfdfd;
   position: relative;
   min-height: 100vh;
   display: -webkit-box;
@@ -647,9 +672,8 @@ main {
 }
 
 main > section:not(.center-container) {
-  padding: 32px 12%;
-  background-color: white;
-  z-index: 0;
+  padding: 32px 25%;
+  background-color: #fdfdfd;
 }
 
 footer {
@@ -706,9 +730,9 @@ a:hover {
 main section.post {
   padding: 32px 25%;
   font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.6;
+  font-weight: 200;
   font-family: "IBM Plex Serif", serif;
+  margin: 16px auto 32px;
 }
 
 main section.post h1 {

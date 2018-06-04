@@ -1,11 +1,8 @@
 header {
-	background-color: white;
+	background-color: $body-bg;
 	display: flex;
 	justify-content: space-between;
-	padding: 8px 80px;
-	border-bottom: 1px solid $light-grey;
-	box-shadow: 0 2px 2px 2px rgba($light-grey, 0.2);
-	z-index: 10;
+	padding: 8px 10%;
 
 	.logo-wrapper {
 		display: inline-block;
@@ -36,6 +33,30 @@ header {
 
 				a {
 					color: $text-color;
+					position: relative;
+					display: inline-block;
+				}
+
+				a:active {
+					color: $highlight-color;
+				}
+
+				a:after {    
+				  content: "";
+				  background: none repeat scroll 0 0 transparent;
+				  bottom: 0;
+				  display: block;
+				  height: 2px;
+				  left: 50%;
+				  position: absolute;
+				  background: $highlight-color;
+				  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				  width: 0;
+				}
+
+				a:hover:after { 
+				  width: 100%; 
+				  left: 0; 
 				}
 			}
 		}

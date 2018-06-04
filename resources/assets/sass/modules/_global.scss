@@ -11,9 +11,8 @@ main {
 }
 
 main > section:not(.center-container) {
-	padding: 32px 12%;
-	background-color: white;
-	z-index: 0;
+	padding: 32px 25%;
+	background-color: $body-bg;
 }
 
 footer {
@@ -28,6 +27,7 @@ a, a:hover, a:focus, a:visited {
 a:hover {
 	color: darken($highlight-color,4%);
 }
+
 
 .full-width {
 	width: 100%;

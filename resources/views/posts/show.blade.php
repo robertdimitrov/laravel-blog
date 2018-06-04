@@ -14,12 +14,15 @@
 			@endforeach
 		</ul>
 	@endif
-	<a href="/posts/{{$post->id}}/edit"><button>Edit</button></a>
+	<form action="/posts/{{$post->id}}/edit" method="GET">
+		{{ csrf_field() }}
+		<button class="button button-animated button-info" type="submit">Edit</button>
+	</form>
 	<form action="/posts/{{$post->id}}" method="POST">
 		{{ csrf_field() }}
 		{{ method_field('DELETE') }}
 
-		<button type='submit'>Delete</button>
+		<button class="button button-animated" type='submit'>Delete</button>
 	</form>
 </section>
 @endsection

@@ -78,10 +78,14 @@ input:focus {
 
 
 .post-form {
-	margin-top: 24px;
+	margin: 24px 0 32px;
 
 	input, textarea {
-		width: 80%;
+		width: 100%;
+	}
+
+	button {
+		margin-top: 16px;
 	}
 }
 
