@@ -27,7 +27,7 @@ Route::get('/posts', 'PostsController@index');
 Route::get('/posts/new', 'PostsController@create');
 Route::post('/posts', 'PostsController@store');
 Route::get('/posts/random', 'PostsController@showRandom');
-Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/posts/{post}', 'PostsController@show')->name('post');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 Route::get('/posts/{post}/edit', 'PostsController@edit');
 Route::patch('/posts/{post}', 'PostsController@update');

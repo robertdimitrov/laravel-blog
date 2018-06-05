@@ -766,6 +766,7 @@ module.exports = __webpack_require__(31);
 __webpack_require__(9);
 
 __webpack_require__(30);
+__webpack_require__(37);
 
 /***/ }),
 /* 9 */
@@ -1875,75 +1876,101 @@ module.exports = function spread(callback) {
 /* 30 */
 /***/ (function(module, exports) {
 
-// form classes
-var registrationFormCls = 'registration-form';
-var feedbackCls = 'feedback';
+(function () {
 
-// validation patterns
-var namePattern = /^.{2,30}$/;
-var passwordPattern = /^.{6,30}$/;
+	// form classes
+	var registrationFormCls = 'registration-form';
+	var feedbackCls = 'feedback';
 
-// validation error messages
-var nameLengthMessage = 'Name must be between 2 and 30 characters.';
-var passwordLengthMessage = 'Password must be between 6 and 30 characters.';
-var passwordMismatchMessage = 'Password does not match the confirm password.';
+	// validation patterns
+	var namePattern = /^.{2,30}$/;
+	var passwordPattern = /^.{6,30}$/;
 
-var validName = function validName(name) {
-	return namePattern.test(name);
-};
-var validPassword = function validPassword(password) {
-	return passwordPattern.test(password);
-};
-var validPasswordMatch = function validPasswordMatch(password, passwordConfirmation) {
-	return password === passwordConfirmation;
-};
+	// validation error messages
+	var nameLengthMessage = 'Name must be between 2 and 30 characters.';
+	var passwordLengthMessage = 'Password must be between 6 and 30 characters.';
+	var passwordMismatchMessage = 'Password does not match the confirm password.';
 
-var formFeedback = function formFeedback(message) {
-	var feedback = document.getElementsByClassName(feedbackCls)[0];
-	feedback.innerHTML = '';
-	var feedbackElement = document.createElement('p');
-	feedbackElement.innerText = message;
-	feedback.appendChild(feedbackElement);
-};
+	var validName = function validName(name) {
+		return namePattern.test(name);
+	};
+	var validPassword = function validPassword(password) {
+		return passwordPattern.test(password);
+	};
+	var validPasswordMatch = function validPasswordMatch(password, passwordConfirmation) {
+		return password === passwordConfirmation;
+	};
 
-var validateRegistrationForm = function validateRegistrationForm(name, password, passwordConfirmation) {
-	if (!validName(name)) {
-		formFeedback(nameLengthMessage);
-		return false;
-	}
+	var formFeedback = function formFeedback(message) {
+		var feedback = document.getElementsByClassName(feedbackCls)[0];
+		feedback.innerHTML = '';
+		var feedbackElement = document.createElement('p');
+		feedbackElement.innerText = message;
+		feedback.appendChild(feedbackElement);
+	};
 
-	if (!validPassword(password)) {
-		formFeedback(passwordLengthMessage);
-		return false;
-	}
-
-	if (!validPasswordMatch(password, passwordConfirmation)) {
-		formFeedback(passwordMismatchMessage);
-		return false;
-	}
-
-	return true;
-};
-
-var registrationForm = document.getElementsByClassName(registrationFormCls)[0];
-
-if (registrationForm) {
-	registrationForm.addEventListener('submit', function (e) {
-		var nameValue = registrationForm.elements['name'].value;
-		var passwordValue = registrationForm.elements['password'].value;
-		var passwordConfirmationValue = registrationForm.elements['password_confirmation'].value;
-
-		if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
-			e.preventDefault();
+	var validateRegistrationForm = function validateRegistrationForm(name, password, passwordConfirmation) {
+		if (!validName(name)) {
+			formFeedback(nameLengthMessage);
+			return false;
 		}
-	});
-}
+
+		if (!validPassword(password)) {
+			formFeedback(passwordLengthMessage);
+			return false;
+		}
+
+		if (!validPasswordMatch(password, passwordConfirmation)) {
+			formFeedback(passwordMismatchMessage);
+			return false;
+		}
+
+		return true;
+	};
+
+	var registrationForm = document.getElementsByClassName(registrationFormCls)[0];
+
+	if (registrationForm) {
+		registrationForm.addEventListener('submit', function (event) {
+			var nameValue = registrationForm.elements['name'].value;
+			var passwordValue = registrationForm.elements['password'].value;
+			var passwordConfirmationValue = registrationForm.elements['password_confirmation'].value;
+
+			if (!validateRegistrationForm(nameValue, passwordValue, passwordConfirmationValue)) {
+				event.preventDefault();
+			}
+		});
+	}
+})();
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */
+/***/ (function(module, exports) {
+
+(function () {
+	var deleteFormCls = 'delete-post';
+
+	var deletePostForm = document.getElementsByClassName(deleteFormCls)[0];
+
+	if (deletePostForm) {
+		deletePostForm.addEventListener('submit', function (event) {
+			if (!confirm('Are you sure you want to delete this post?')) {
+				event.preventDefault();
+			}
+		});
+	}
+})();
 
 /***/ })
 /******/ ]);

@@ -48,7 +48,7 @@ class PostsController extends Controller
 
     	$this->persistPost($post);
 
-    	return redirect()->home();
+    	return redirect()->route('post', ['post' => $post]);
     }
 
     public function showRandom()
@@ -57,7 +57,11 @@ class PostsController extends Controller
     		->filter(request(['category']))
     		->first();
 
-    	return view('posts.show', compact('post'));
+        if ($post) {
+            return view('posts.show', compact('post'));
+        }
+
+        return redirect()->home();
     }
 
     public function show(Post $post)
@@ -87,7 +91,7 @@ class PostsController extends Controller
 
     	$this->persistPost($post);
 
-    	return redirect()->home();
+        return redirect()->route('post', ['post' => $post]);
     }
 
     private function persistPost(Post $post)

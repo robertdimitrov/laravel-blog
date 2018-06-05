@@ -30,34 +30,6 @@ header {
 				display: inline-block;
 				list-style-type: none;
 				margin-left: 24px;
-
-				a {
-					color: $text-color;
-					position: relative;
-					display: inline-block;
-				}
-
-				a:active {
-					color: $highlight-color;
-				}
-
-				a:after {    
-				  content: "";
-				  background: none repeat scroll 0 0 transparent;
-				  bottom: 0;
-				  display: block;
-				  height: 2px;
-				  left: 50%;
-				  position: absolute;
-				  background: $highlight-color;
-				  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-				  width: 0;
-				}
-
-				a:hover:after { 
-				  width: 100%; 
-				  left: 0; 
-				}
 			}
 		}
 	

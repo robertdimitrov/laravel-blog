@@ -14,10 +14,10 @@
 	<div class="buttons-wrapper">
 		<ul>
 			<li>
-				<a href="/posts/random">Random</a>
+				<a class="animated-link" href="/posts/random">Random</a>
 			</li>
 			<li>
-				<a href="/posts/new">New Post</a>
+				<a class="animated-link" href="/posts/new">New Post</a>
 			</li>
 		</ul>
 	</div>

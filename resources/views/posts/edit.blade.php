@@ -20,7 +20,7 @@
 
 			<div class="form-input-group">
 				<label for="categories">Categories:</label>
-				<input type="text" name="categories" id="categories" value="{{ $categories }}" required>
+				<input type="text" name="categories" id="categories" value="{{ $categories }}">
 			</div>			
 
 			<button class="button button-animated button-success" type="submit">Update post</button>

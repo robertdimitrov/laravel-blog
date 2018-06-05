@@ -89,6 +89,11 @@ input:focus {
 	}
 }
 
+.button-link-form {
+	display: inline-block;
+	margin-right: 4px;
+}
+
 
 @media screen and (max-width: $breakpoint-mobile) {
 	input {

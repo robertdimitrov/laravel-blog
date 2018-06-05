@@ -7,3 +7,4 @@
 require('./bootstrap');
 
 require('./form_validation');
+require('./confirm_post_delete.js');

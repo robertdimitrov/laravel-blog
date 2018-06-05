@@ -442,35 +442,6 @@ header .buttons-wrapper ul li {
   margin-left: 24px;
 }
 
-header .buttons-wrapper ul li a {
-  color: #333;
-  position: relative;
-  display: inline-block;
-}
-
-header .buttons-wrapper ul li a:active {
-  color: #ee0039;
-}
-
-header .buttons-wrapper ul li a:after {
-  content: "";
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #ee0039;
-  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-header .buttons-wrapper ul li a:hover:after {
-  width: 100%;
-  left: 0;
-}
-
 @media screen and (max-width: 768px) {
   header {
     padding: 8px 40px;
@@ -542,6 +513,16 @@ footer {
 .button-animated:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+.button-link {
+  display: inline;
+  border: 0;
+  background-color: inherit;
+  color: #333;
+  padding: 4px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 label {
@@ -646,6 +627,11 @@ input:focus {
   margin-top: 16px;
 }
 
+.button-link-form {
+  display: inline-block;
+  margin-right: 4px;
+}
+
 @media screen and (max-width: 480px) {
   input {
     width: 220px;
@@ -691,6 +677,36 @@ a:visited {
 
 a:hover {
   color: #da0034;
+}
+
+.animated-link,
+a.animated-link {
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.animated-link:active {
+  color: #ee0039;
+}
+
+.animated-link:after {
+  content: "";
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ee0039;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.animated-link:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .full-width {
