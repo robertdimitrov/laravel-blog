@@ -2,7 +2,7 @@
 
 @section('content')
 <section>
-	<h1>Edit existing post</h1>
+	<h1>Edit post</h1>
 	<div class="form-wrapper">
 		<form class="post-form" action="/posts/{{$post->id}}" method="POST">
 			{{ csrf_field() }}

@@ -444,7 +444,7 @@ header .buttons-wrapper ul li {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 8px 40px;
+    padding: 8px 8%;
   }
 }
 
@@ -456,9 +456,9 @@ footer {
 }
 
 .button {
-  background-color: #ee0039;
-  -webkit-box-shadow: 0 2px 8px 2px rgba(238, 0, 57, 0.3);
-          box-shadow: 0 2px 8px 2px rgba(238, 0, 57, 0.3);
+  background-color: #400cb7;
+  -webkit-box-shadow: 0 2px 8px 2px rgba(64, 12, 183, 0.3);
+          box-shadow: 0 2px 8px 2px rgba(64, 12, 183, 0.3);
   color: white;
   border: none;
   border-radius: 4px;
@@ -657,7 +657,8 @@ main {
           flex: 1 0 auto;
 }
 
-main > section:not(.center-container) {
+main > section:not(.center-container),
+main > article {
   padding: 32px 25%;
   background-color: #fdfdfd;
 }
@@ -672,11 +673,11 @@ a:hover,
 a:focus,
 a:visited {
   text-decoration: none;
-  color: #ee0039;
+  color: #400cb7;
 }
 
 a:hover {
-  color: #da0034;
+  color: #390ba4;
 }
 
 .animated-link,
@@ -687,7 +688,7 @@ a.animated-link {
 }
 
 .animated-link:active {
-  color: #ee0039;
+  color: #400cb7;
 }
 
 .animated-link:after {
@@ -698,7 +699,7 @@ a.animated-link {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #ee0039;
+  background: #400cb7;
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
@@ -741,9 +742,14 @@ a.animated-link {
   main {
     width: 100%;
   }
+
+  main > section:not(.center-container),
+  main > article.post {
+    padding: 24px 8%;
+  }
 }
 
-main section.post {
+article.post {
   padding: 32px 25%;
   font-size: 1.2rem;
   font-weight: 200;
@@ -751,7 +757,75 @@ main section.post {
   margin: 16px auto 32px;
 }
 
-main section.post h1 {
+article.post h1 {
   font-family: "IBM Plex Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+article.post .meta {
+  padding: 0;
+  line-height: 1.2;
+  font-size: 0.8rem;
+}
+
+article.post .meta .creation-date {
+  display: block;
+}
+
+article.post .meta .categories {
+  margin-top: 4px;
+}
+
+article.post .meta .categories ul {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+article.post .meta .categories ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+article.post .content-wrapper strong {
+  font-weight: 700;
+}
+
+article.post .content-wrapper code,
+article.post .content-wrapper pre {
+  background-color: #eee;
+  color: #777;
+  border-radius: 4px;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+article.post .content-wrapper code {
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+article.post .content-wrapper pre {
+  padding: 8px 16px;
+}
+
+article.post .content-wrapper blockquote {
+  border-left: 4px solid #400cb7;
+  font-style: italic;
+  margin: 16px 0;
+  padding: 0 16px;
+}
+
+article.post .content-wrapper hr {
+  background-color: #eee;
+  height: 2px;
+  border: 0;
+}
+
+article.post .content-wrapper image {
+  max-width: 100%;
 }
 

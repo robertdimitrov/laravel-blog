@@ -1,4 +1,4 @@
-main section.post {
+article.post {
 	padding: 32px 25%;
 	font-size: 1.2rem;
 	font-weight: 200;
@@ -7,5 +7,74 @@ main section.post {
 	
 	h1 {
 		font-family: $ibm-plex;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.meta {
+		padding: 0;
+		line-height: 1.2;
+		font-size: 0.8rem;
+
+		.creation-date {
+			display: block;
+		}
+
+		.categories {
+			margin-top: 4px;
+
+			ul {
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+
+				li {
+					margin: 0;
+					padding: 0;
+					display: inline-block;
+					list-style-type: none;
+				}
+			}
+		}
+	}
+
+	.content-wrapper {
+		strong {
+			font-weight: 700;
+		}
+
+		code, pre {
+			background-color: $light-grey;
+			color: $text-color-light;
+			border-radius: 4px;
+			line-height: 1.4;
+			font-size: 1.1rem;
+		}
+
+		code {
+			display: inline-block;
+			padding: 2px 4px;
+		}
+
+		pre {
+			padding: 8px 16px;
+		}
+
+		blockquote {
+			border-left: 4px solid $highlight-color;
+			font-style: italic;
+			margin: 16px 0;
+			padding: 0 16px;
+		}
+
+		hr {
+			background-color: $light-grey;
+			height: 2px;
+			border: 0;
+		}
+
+		image {
+			max-width: 100%;
+		}
 	}
 }

@@ -98,7 +98,7 @@ class PostsController extends Controller
     {
 		$title = request('title');
     	$content_md = request('content_md');
-    	$inputCategories = explode(' ', request('categories'));
+    	$inputCategories = preg_split('/\s+/', request('categories'));
 
     	$tokens = $this->tokenizer->tokenize($title . $content_md);
 

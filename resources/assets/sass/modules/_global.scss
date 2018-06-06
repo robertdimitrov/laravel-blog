@@ -10,7 +10,7 @@ main {
 	flex: 1 0 auto;
 }
 
-main > section:not(.center-container) {
+main > section:not(.center-container), main > article {
 	padding: 32px 25%;
 	background-color: $body-bg;
 }
@@ -73,5 +73,9 @@ a:hover {
 @media screen and (max-width: $breakpoint-tablet) {
 	main {
 		width: 100%;
+	}
+
+	main > section:not(.center-container), main > article.post {
+	 	padding: 24px 8%;
 	}
 }

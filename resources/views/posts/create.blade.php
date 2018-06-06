@@ -2,7 +2,7 @@
 
 @section('content')
 <section>
-	<h1>Create new post</h1>
+	<h1>Create a new post</h1>
 	<div class="form-wrapper">
 		<form class="post-form" action="/posts" method="POST">
 			{{ csrf_field() }}
