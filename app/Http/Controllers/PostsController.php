@@ -23,13 +23,21 @@ class PostsController extends Controller
 
     public function index()
     {
-    	$posts = Post::latest()
-    		->filter(request(['search', 'page', 'category']))
-    		->distinct()
-    		->get()
-    		->toArray();
+        $posts = Post::latest()
+            ->filter(request(['search', 'category']))
+            ->distinct();
 
-    	return view('posts.index', compact('posts'));
+        $postsCount = $posts->count();
+
+        $posts = $posts->filter(request(['page']))
+            ->get()
+            ->toArray();
+
+        $search = request('search') ?: '';
+        $page = request('page') ?: '';
+        $category = request('category') ?: '';
+
+    	return view('posts.index', compact('posts', 'search', 'page', 'category', 'postsCount'));
     }
 
     public function create()

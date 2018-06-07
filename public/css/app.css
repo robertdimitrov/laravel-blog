@@ -749,6 +749,15 @@ a.animated-link {
   }
 }
 
+.posts-list .post-list-item h1 {
+  padding: 8px 0;
+}
+
+.posts-list .post-list-item p {
+  padding: 0;
+  font-family: "IBM Plex Serif", serif;
+}
+
 article.post {
   padding: 32px 25%;
   font-size: 1.2rem;
