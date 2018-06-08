@@ -22,7 +22,7 @@
 				<input type="text" name="categories" id="categories">
 			</div>
 
-			<button class="button button-animated button-success" type="submit">Create post</button>
+			<button class="button button-animated" type="submit">Create post</button>
 		</form>
 	</div>
 </section>

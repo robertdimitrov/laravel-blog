@@ -23,7 +23,7 @@
 				<input type="text" name="categories" id="categories" value="{{ $categories }}">
 			</div>			
 
-			<button class="button button-animated button-success" type="submit">Update post</button>
+			<button class="button button-animated" type="submit">Update post</button>
 		</form>
 </div>
 </section>

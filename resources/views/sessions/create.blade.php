@@ -21,7 +21,7 @@
 						<input type="password" name="password" id="password" required>
 					</div>
 
-					<button class="button button-animated button-success full-width" type="submit">Sign in</button>
+					<button class="button button-animated full-width" type="submit">Sign in</button>
 				</form>
 			</div>
 			<div class="feedback">

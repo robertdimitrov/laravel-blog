@@ -4,7 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap')
 
-require('./form_validation');
-require('./confirm_post_delete.js');
+require('./form_validation')
+require('./confirm_post_delete.js')
+require('./autofocus_searchbar.js')

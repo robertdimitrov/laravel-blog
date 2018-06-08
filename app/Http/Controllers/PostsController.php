@@ -107,6 +107,8 @@ class PostsController extends Controller
 		$title = request('title');
     	$content_md = request('content_md');
     	$inputCategories = preg_split('/\s+/', request('categories'));
+        // get rid of empty strings in categories array
+        $inputCategories = array_diff($inputCategories, ['']);
 
     	$tokens = $this->tokenizer->tokenize($title . $content_md);
 

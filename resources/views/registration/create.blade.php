@@ -26,7 +26,7 @@
 						<input type="password" name="password_confirmation" id="password_confirmation" required minlength="6" maxlength="30">
 					</div>
 
-					<button class="button button-animated button-success full-width" type="submit">Create account</button>
+					<button class="button button-animated full-width" type="submit">Create account</button>
 				</form>
 			</div>
 			<div class="feedback">

@@ -7,7 +7,12 @@
 
 	@empty($homePage)
 		<div class="searchbar-wrapper">
-			<p>Search bar comes here</p>
+			<form action="/posts" method="GET">
+				<input type="search" placeholder="Search" name="search">
+				<button type="submit">
+					<img class="search-icon" src="/img/search.svg">
+				</button>
+			</form>
 		</div>
 	@endempty
 

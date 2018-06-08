@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	$homePage = true;
-    return view('welcome', compact('homePage'));
-})->name('home');
+Route::get('/', 'HomeController@show')->name('home');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');

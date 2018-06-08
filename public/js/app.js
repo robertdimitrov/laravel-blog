@@ -767,6 +767,7 @@ __webpack_require__(9);
 
 __webpack_require__(30);
 __webpack_require__(37);
+__webpack_require__(38);
 
 /***/ }),
 /* 9 */
@@ -1970,6 +1971,19 @@ module.exports = function spread(callback) {
 			}
 		});
 	}
+})();
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+(function () {
+	window.onload = function () {
+		var searchbar = document.querySelector('.searchbar-wrapper input');
+		if (searchbar) {
+			searchbar.focus();
+		}
+	};
 })();
 
 /***/ })

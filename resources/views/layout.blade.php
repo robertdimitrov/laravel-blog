@@ -6,7 +6,7 @@
 	<title>Laravel Blog</title>
 	<link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body @isset($homePage)class="homepage"@endisset>
 	@auth
 		@include('layouts.header')
 	@endauth
