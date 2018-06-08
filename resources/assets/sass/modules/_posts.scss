@@ -1,12 +1,22 @@
 .posts-list {
 	.post-list-item {
-		h1 {
-			padding: 8px 0;
+		h2 {
+			margin: 0;
+			padding: 0;
 		}
 
 		p {
 			padding: 0;
+			margin: 0 0 32px;
 			font-family: $ibm-plex-serif;
+		}
+	}
+
+	.pagination {
+		text-align: center;
+
+		.previous {
+			margin-right: 16px;
 		}
 	}
 }

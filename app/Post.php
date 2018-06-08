@@ -33,7 +33,7 @@ class Post extends Model
 
     		$page = gettype($page) === "integer" ? $page : 1;
 
-			$query->paginate($page*$postsPerPage);
+			$query->skip(($page - 1) * $postsPerPage);
     	}
 
     	if (array_key_exists('search', $filters))

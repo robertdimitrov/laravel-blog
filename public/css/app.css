@@ -749,13 +749,23 @@ a.animated-link {
   }
 }
 
-.posts-list .post-list-item h1 {
-  padding: 8px 0;
+.posts-list .post-list-item h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .posts-list .post-list-item p {
   padding: 0;
+  margin: 0 0 32px;
   font-family: "IBM Plex Serif", serif;
+}
+
+.posts-list .pagination {
+  text-align: center;
+}
+
+.posts-list .pagination .previous {
+  margin-right: 16px;
 }
 
 article.post {
