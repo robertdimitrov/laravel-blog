@@ -45,11 +45,6 @@ class Post extends Model
 			{
 				$query->orWhere('tokens', 'like', '%' . $token . '%');
 			}
-
-			if (count($queryTokens) === 0)
-			{
-				$query->take(0);
-			}
     	}
 
         if (array_key_exists('category', $filters))

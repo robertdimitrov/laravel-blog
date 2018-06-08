@@ -910,6 +910,7 @@ body.homepage .searchbar-wrapper h1 {
 
 body.homepage section {
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 body.homepage .categories {

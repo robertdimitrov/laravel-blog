@@ -17,7 +17,6 @@
 		@forelse ($latestPosts as $post)
 			<div class="post-list-item">
 				<h2 class="post-title"><a href='/posts/{{$post['id']}}'>{{ $post['title'] }}</a></h2>
-				<p class="post-excerpt">{{ str_limit($post['content_md'], $limit = 150, $end = '...') }}</p>
 			</div>
 		@empty
 			<p>There are no posts yet. <a href="/posts/new">Click here</a> to create your first one!</p>
